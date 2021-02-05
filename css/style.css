@@ -1,0 +1,153 @@
+* {
+  box-sizing: border-box; }
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+header {
+  width: 100%; }
+  header .navbar {
+    display: none; }
+
+.main-menu {
+  background: black;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 2; }
+  .main-menu ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center; }
+    .main-menu ul li {
+      cursor: pointer;
+      color: white;
+      list-style: none;
+      font-size: 1.2rem;
+      padding: 1rem;
+      width: 20%;
+      text-align: center;
+      border-right: 1px solid #a9a9a9;
+      transition: color 0.8s linear 0.2s;
+      transition: background 0.8s linear 0.2s; }
+    .main-menu ul li:last-of-type {
+      border-right: 0px; }
+    .main-menu ul li:hover {
+      color: black;
+      background: white; }
+
+.bg-black {
+  background: black;
+  z-index: 20 !important; }
+  .bg-black .navbar-toggler {
+    position: absolute;
+    right: 20px;
+    top: 8px; }
+
+@media (min-width: 0px) and (max-width: 599px) {
+  .carousel {
+    margin-top: 55px; }
+  .main-menu {
+    display: none; }
+  header .navbar {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%; } }
+
+.carousel {
+  height: 100vh; }
+  .carousel .carousel-inner::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); }
+  .carousel .carousel-inner {
+    height: 100vh; }
+    .carousel .carousel-inner .carousel-item {
+      height: 100vh; }
+      .carousel .carousel-inner .carousel-item img {
+        height: 100vh;
+        object-fit: cover;
+        object-position: center; }
+      .carousel .carousel-inner .carousel-item .carousel-caption h5 {
+        font-size: 2rem;
+        text-shadow: 2px 2px 2px black; }
+      .carousel .carousel-inner .carousel-item .carousel-caption p {
+        font-size: 1.5rem;
+        text-shadow: 2px 2px 2px black; }
+
+@media (min-width: 1024px) and (max-width: 1500px) {
+  .carousel {
+    height: 90vh; }
+    .carousel .carousel-inner {
+      height: 90vh; }
+      .carousel .carousel-inner .carousel-item {
+        height: 90vh; }
+        .carousel .carousel-inner .carousel-item img {
+          height: 90vh; } }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .carousel {
+    height: 60vh; }
+    .carousel .carousel-inner {
+      height: 60vh; }
+      .carousel .carousel-inner .carousel-item {
+        height: 60vh; }
+        .carousel .carousel-inner .carousel-item .carousel-caption h5 {
+          font-size: 1.5rem; }
+        .carousel .carousel-inner .carousel-item .carousel-caption p {
+          font-size: 1rem; }
+        .carousel .carousel-inner .carousel-item img {
+          height: 60vh; } }
+
+@media (min-width: 600px) and (max-width: 767px) {
+  .carousel {
+    height: 50vh; }
+    .carousel .carousel-inner::after {
+      content: '';
+      background: none; }
+    .carousel .carousel-inner {
+      height: 50vh; }
+      .carousel .carousel-inner .carousel-item {
+        height: 50vh; }
+        .carousel .carousel-inner .carousel-item img {
+          height: 50vh; } }
+
+@media (min-width: 480px) and (max-width: 599px) {
+  .carousel {
+    height: 40vh; }
+    .carousel .carousel-inner::after {
+      content: '';
+      background: none; }
+    .carousel .carousel-inner {
+      height: 40vh; }
+      .carousel .carousel-inner .carousel-item {
+        height: 40vh; }
+        .carousel .carousel-inner .carousel-item img {
+          height: 40vh; } }
+
+@media (min-width: 0px) and (max-width: 479px) {
+  .carousel {
+    height: 30vh; }
+    .carousel .carousel-inner::after {
+      content: '';
+      background: none; }
+    .carousel .carousel-inner {
+      height: 30vh; }
+      .carousel .carousel-inner .carousel-item {
+        height: 30vh; }
+        .carousel .carousel-inner .carousel-item img {
+          height: 30vh; } }
