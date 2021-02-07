@@ -1,7 +1,7 @@
 import sushiData from '../data/sushiData.js';
-console.log(`Nuestro sushi disponible es: `);
+alert(`Nuestro sushi disponible es: `);
 for(let sushi of sushiData){
-    console.log(sushi.name);
+    alert(sushi.name);
 }
 
 class Sushi{
@@ -82,12 +82,11 @@ const aumento = porcentaje => {
 
 //buscamos un sushi por prompt
 const {name:sushiName, description, prices} = busqueda(prompt('Ingrese el sushi que quiere encontrar'));
-console.log(`Nombre: ${sushiName}`);
-console.log(`Descripcion: ${description}`);
+prompt(`Nombre: ${sushiName}, Descripcion: ${description}`);
 console.log(`precios: ${prices[0].unidades} unidades = $${prices[0].precio} - ${prices[1].unidades} unidades = $${prices[1].precio}`);
 //filtramos por tipo
 
-console.log(filtro(prompt('Ingrese el tipo de sushi')), 'SUSHI TIPO ' + tipo.toUpperCase());
+console.log(filtro(prompt('Ingrese el tipo de sushi (combo o pieza)')), 'SUSHI TIPO ' + tipo.toUpperCase());
 
 //aumentamos el precio a todos los sushi
 aumento(+prompt('ingrese el porcentaje que desea aumentar'));
