@@ -81,7 +81,8 @@ header {
       .carousel .carousel-inner .carousel-item img {
         height: 100vh;
         object-fit: cover;
-        object-position: center; }
+        object-position: center;
+        width: 100%; }
       .carousel .carousel-inner .carousel-item .carousel-caption h5 {
         font-size: 2rem;
         text-shadow: 2px 2px 2px black; }
