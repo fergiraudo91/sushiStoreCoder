@@ -21,7 +21,7 @@ sushiData.forEach((el, index) => {
         <button class='btnCompra'>Comprar</button>
         </div>
     `;
-    sushi.addEventListener('click', () => {agregarItemCarrito(index)});
+    sushi.querySelector('button').addEventListener('click', () => {agregarItemCarrito(index)});
     sushiList.append(sushi);
 });
 

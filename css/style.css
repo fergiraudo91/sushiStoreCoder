@@ -204,8 +204,8 @@ header {
       background: black;
       color: white;
       padding: 5px;
-      transition: color 0.8s linear 0.2s;
-      transition: background 0.8s linear 0.2s;
+      transition: color 0.2s linear 0.2s;
+      transition: background 0.2s linear 0.2s;
       border: 1px solid #1c1c1c;
       box-shadow: 2px 2px 2px black;
       border-radius: 5px; }
