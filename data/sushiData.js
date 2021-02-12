@@ -1,7 +1,7 @@
 const sushiData = [
     {
         name: 'Bomba Afrodita',
-        description: 'Salmon, mango, palta y queso philadelphia envuelto en tamago, bañado en salsa de maracuya, coronado con batatas fritas.',
+        description: 'Salmon, mango, palta y queso phila envuelto en tamago, con salsa de maracuya y batatas fritas.',
         img: 'fotos/piezas/bombra_afrodita.jpg',
         type: 'pieza',
         prices: [
@@ -17,7 +17,7 @@ const sushiData = [
     },
     {
         name: 'Geishas de Salmón',
-        description: 'Geishas de Salmón rellenas de queso Philadelphia con Palta',
+        description: 'Geishas de Salmón fresco rellenas de queso Philadelphia con Palta',
         img: 'fotos/piezas/geishas_salmon.jpg',
         type: 'pieza',
         prices: [
@@ -145,7 +145,7 @@ const sushiData = [
     },
     {
         name: 'Roll California',
-        description: 'Roll relleno de kanikama con philadelphia y palta.',
+        description: 'Roll relleno de kanikama con philadelphia y palta. Decorado con sésamo',
         img: 'fotos/piezas/roll_california.jpg',
         type: 'pieza',
         prices: [
@@ -161,7 +161,7 @@ const sushiData = [
     },
     {
         name: 'Roll Chop Suey',
-        description: 'Roll relleno con vegetales salteados al wok y palta.',
+        description: 'Roll relleno con vegetales salteados al wok y palta. Decorado con sésamo',
         img: 'fotos/piezas/roll_chop_suey.jpg',
         type: 'pieza',
         prices: [
@@ -193,7 +193,7 @@ const sushiData = [
     },
     {
         name: 'Roll New York con Philadelphia',
-        description: 'Piezas de roll relleno de salmón, palta, y queso Philadelphia.',
+        description: 'Piezas de roll relleno de salmón, palta, y queso Philadelphia. Decorado con sésamo',
         img: 'fotos/piezas/roll_new_york_phila.jpg',
         type: 'pieza',
         prices: [
@@ -257,7 +257,7 @@ const sushiData = [
     },
     {
         name: 'Roll Spicy Tuna c/palta',
-        description: 'Roll relleno de atún, mayonesa, verdeo y togarashi.',
+        description: 'Roll relleno de atún, mayonesa, verdeo y togarashi. Cubierto con sésamo tostado.',
         img: 'fotos/piezas/roll_spicy.jpg',
         type: 'pieza',
         prices: [
@@ -289,7 +289,7 @@ const sushiData = [
     },
     {
         name: 'Roll Valencia',
-        description: 'Roll relleno de tomates secos, rucula fresca, cebolla caramelizada, philadelphia saborizado con cebolla y ciboulette, cubierto con ciboulette picado.',
+        description: 'Tomates secos, rucula fresca, cebolla caramelizada, philadelphia y cubierto con ciboulette picado.',
         img: 'fotos/piezas/roll_valencia.jpg',
         type: 'pieza',
         prices: [
@@ -305,7 +305,7 @@ const sushiData = [
     },
     {
         name: 'Sashimi Salmon',
-        description: 'Selectos cortes del mas fresco salmon.',
+        description: 'Selectos cortes del mas fresco salmon de la casa, de primera calidad.',
         img: 'fotos/piezas/sashimi_salmon.jpg',
         type: 'pieza',
         prices: [
@@ -361,7 +361,7 @@ const sushiData = [
     },
     {
         name: 'BLACK',
-        description: 'Para darse un gusto completo! Combo premium para probar un poco de todo.',
+        description: 'Combo premium para probar un poco de todo.',
         img: 'fotos/combos/bilbao.jpg',
         type: 'combo',
         prices: [

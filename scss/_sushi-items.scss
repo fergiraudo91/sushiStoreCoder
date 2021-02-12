@@ -1,0 +1,96 @@
+.sushiList{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    width: 100%;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    background: black;
+    .sushi-item{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        border-radius: 10px;
+        
+        .content{
+            width: 100%;
+            padding: 20px 20px;
+            background: white;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+        img{
+            width: 100%;
+            height: 275px;
+            object-fit: cover;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+        h2{
+            color: black;
+            font-size: 1.5rem;
+            text-align: center;
+            padding-top: 10px;
+        }
+        h4{
+            font-size: 1rem;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            text-align: justify;
+            color: #1c1c1c;
+        }
+        select{
+            display: block;
+            width: 90%;
+            margin: 0 auto;
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+            padding: 5px;
+            cursor: pointer;
+        }
+        button{
+            width: 100%;
+            background: black;
+            color: white;
+            padding: 5px;
+            transition: color 0.8s linear 0.2s;
+            transition: background 0.8s linear 0.2s;
+            border: 1px solid #1c1c1c;
+            box-shadow: 2px 2px 2px black;
+            border-radius: 5px;
+        }
+        button:hover{
+            color: black;
+            background: white;
+        }
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1119px){
+    .sushiList{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px){
+    .sushiList{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px){
+    .sushiList{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        padding: 1rem;
+    }
+    
+}
+
+@media (min-width: 0px) and (max-width: 575px){
+    .sushiList{
+        grid-template-columns: 1fr;
+    }
+}
