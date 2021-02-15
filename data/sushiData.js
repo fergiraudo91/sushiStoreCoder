@@ -65,7 +65,7 @@ const sushiData = [
     },
     {
         name: 'HOT New York Philadelphia',
-        description: 'Relleno de salmón, arroz, palta y queso Philadelphia.',
+        description: 'Rebosado, Relleno de salmón, arroz, palta y queso Philadelphia.',
         img: 'fotos/piezas/hot_new_york_phila.jpg',
         type: 'pieza',
         prices: [
@@ -193,7 +193,7 @@ const sushiData = [
     },
     {
         name: 'Roll New York con Philadelphia',
-        description: 'Piezas de roll relleno de salmón, palta, y queso Philadelphia. Decorado con sésamo',
+        description: 'Relleno de salmón, palta, y queso Philadelphia. Decorado con sésamo',
         img: 'fotos/piezas/roll_new_york_phila.jpg',
         type: 'pieza',
         prices: [
