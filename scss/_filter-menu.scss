@@ -13,6 +13,26 @@ $background-1: #0e0e0e;
         color: white;
     }
     .filter-menu{
+        .combo:hover{
+            transition:all .5s ease-in-out;
+            -webkit-transform:scale(1.3);
+            transform:scale(1.3);
+        }
+        .pieza:hover{
+            transition:all .5s ease-in-out;
+            -webkit-transform:scale(1.3);
+            transform:scale(1.3);
+        }
+        .ensalada:hover{
+            transition:all .5s ease-in-out;
+            -webkit-transform:scale(1.3);
+            transform:scale(1.3);
+        }
+        .todos:hover{
+            transition:all .5s ease-in-out;
+            -webkit-transform:scale(1.3);
+            transform:scale(1.3);
+        }
         display: flex;
         justify-content: space-around;
         align-items: center;

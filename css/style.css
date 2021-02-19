@@ -171,6 +171,22 @@ header {
     justify-content: space-around;
     align-items: center;
     padding: 1rem 0; }
+    .filter .filter-menu .combo:hover {
+      transition: all .5s ease-in-out;
+      -webkit-transform: scale(1.3);
+      transform: scale(1.3); }
+    .filter .filter-menu .pieza:hover {
+      transition: all .5s ease-in-out;
+      -webkit-transform: scale(1.3);
+      transform: scale(1.3); }
+    .filter .filter-menu .ensalada:hover {
+      transition: all .5s ease-in-out;
+      -webkit-transform: scale(1.3);
+      transform: scale(1.3); }
+    .filter .filter-menu .todos:hover {
+      transition: all .5s ease-in-out;
+      -webkit-transform: scale(1.3);
+      transform: scale(1.3); }
     .filter .filter-menu img {
       height: 100px;
       width: 100px;
