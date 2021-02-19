@@ -398,6 +398,78 @@ const sushiData = [
                 precio: 1729
             }
         ]
+    },
+    {
+        name: 'Poke Salmon Fresh',
+        description: 'Fresca ensalada de salmón, eneldo fresco, rayadura de limon, aceite de sesamo, palta, queso phila, sobre arroz gohan (incluye salsa soja)',
+        img: 'fotos/ensaladas/poke-salmon.jpg',
+        type: 'ensalada',
+        prices: [
+            {
+                unidades: 1,
+                precio: 499,
+            }
+        ]
+    },
+    {
+        name: 'Poke Salmon Crispy',
+        description: 'Fresca ensalada de salmón rebozado, palta, queso phila, repollo y zanahoria sobre arroz Incluye 1 Salsa Soja',
+        img: 'fotos/ensaladas/poke-salmon-crispy.jpg',
+        type: 'ensalada',
+        prices: [
+            {
+                unidades: 1,
+                precio: 499,
+            }
+        ]
+    },
+    {
+        name: 'Poke Salad Hawaiana',
+        description: 'Fresca ensalada de salmon fresco, julianas de tamagoi, repollo colorado encurtido, palta y queso phila, sobre arroz gohan (incluye salsa soja)',
+        img: 'fotos/ensaladas/poke_salad_hawaiana.jpg',
+        type: 'ensalada',
+        prices: [
+            {
+                unidades: 1,
+                precio: 499,
+            }
+        ]
+    },
+    {
+        name: 'Poke Langostinos',
+        description: 'Fresca ensalada de langostinos rebozados, palta, queso phila, repollo y zanahoria sobre arroz Incluye 1 Salsa Soja',
+        img: 'fotos/ensaladas/poke-langostinos.jpg',
+        type: 'ensalada',
+        prices: [
+            {
+                unidades: 1,
+                precio: 411,
+            }
+        ]
+    },
+    {
+        name: 'Poke Pollo MEX',
+        description: 'Fresca ensalada de pollo rebozado, salsa teriyaki, guacamole y queso phila, sobre arroz gohan (incluye salsa soja)',
+        img: 'fotos/ensaladas/poke-pollo-mex.jpg',
+        type: 'ensalada',
+        prices: [
+            {
+                unidades: 1,
+                precio: 411,
+            }
+        ]
+    },
+    {
+        name: 'Poke Veggie',
+        description: 'Fresca ensalada de vegetales de estacion salteados en salsa teriyaki y queso phila, sobre arroz gohan (incluye salsa soja)',
+        img: 'fotos/ensaladas/poke-veggie.jpg',
+        type: 'ensalada',
+        prices: [
+            {
+                unidades: 1,
+                precio: 411,
+            }
+        ]
     }
 ];
 

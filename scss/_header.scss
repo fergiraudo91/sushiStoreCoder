@@ -26,8 +26,9 @@ header{
             width: 20%;
             text-align: center;
             border-right: 1px solid #a9a9a9;
-            transition: color 0.8s linear 0.2s;
-            transition: background 0.8s linear 0.2s;
+            transition: color 0.5s linear 0.2s;
+            transition: background 0.5s linear 0.2s;
+            border-radius: 5px;
         }
         li:last-of-type{
             border-right: 0px;
