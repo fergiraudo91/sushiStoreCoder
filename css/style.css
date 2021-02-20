@@ -225,7 +225,8 @@ header {
 @media (min-width: 0px) and (max-width: 500px) {
   .filter-menu {
     display: grid !important;
-    grid-template-columns: repeat(2, 1fr); }
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 20px; }
     .filter-menu .combo {
       align-self: center;
       justify-self: center; }

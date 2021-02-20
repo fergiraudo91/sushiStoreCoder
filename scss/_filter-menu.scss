@@ -61,6 +61,7 @@ $background-1: #0e0e0e;
   .filter-menu {
     display: grid !important;
     grid-template-columns: repeat(2, 1fr);
+    row-gap: 20px;
     .combo {
       align-self: center;
       justify-self: center;
