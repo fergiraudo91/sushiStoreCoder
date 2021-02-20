@@ -79,7 +79,6 @@ const filtrarTodo = () => {
 reenderizar();
 
 carrito.addEventListener('click', showCarItems);
-
 comboFilter.addEventListener('click', filtrarCombo);
 piezaFilter.addEventListener('click', filtrarPieza);
 ensaladaFilter.addEventListener('click', filtrarEnsalada);

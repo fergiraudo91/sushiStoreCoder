@@ -1,5 +1,6 @@
 .carousel{
     height: 100vh;
+   
     .carousel-inner::after{
         content: '';
             position: absolute;
@@ -11,6 +12,19 @@
     }
     .carousel-inner{
         height: 100vh;
+        .logo{
+            width: 150px;
+            position: absolute;
+            top: 10%;
+            left: 5%;
+            z-index: 97;
+            img{
+                width: 100%;
+                z-index: 98;
+                border-radius: 100%;
+                border: 2px solid white;
+            }
+        }
         .carousel-item{
             height: 100vh;
             img{
@@ -33,6 +47,8 @@
     }
 }
 
+
+
 @media (min-width: 1024px) and (max-width: 1500px){
     .carousel{
         height: 90vh;
@@ -52,6 +68,9 @@
     .carousel{
         height: 60vh;
         .carousel-inner{
+            .logo{
+                top:15%;
+            }
             height: 60vh;
             .carousel-item{
                 .carousel-caption{
@@ -79,6 +98,9 @@
             background: none;
         }
         .carousel-inner{
+            .logo{
+                top: 20%;
+            }
             height: 50vh;
             .carousel-item{
                 height: 50vh;
@@ -98,6 +120,9 @@
             background: none;
         }
         .carousel-inner{
+            .logo{
+                display: none;
+            }
             height: 40vh;
             .carousel-item{
                 height: 40vh;
@@ -117,6 +142,9 @@
             background: none;
         }
         .carousel-inner{
+            .logo{
+                display: none;
+            }
             height: 30vh;
             .carousel-item{
                 height: 30vh;
