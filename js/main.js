@@ -25,7 +25,7 @@ const reenderizar = () =>{
             <select>
                 ${opciones}
             </select>
-            <button class='btnCompra'>Comprar</button>
+            <button class='btnCompra'>Agregar Al Carrito</button>
             </div>
         `;
         sushi.querySelector('button').addEventListener('click', () => {agregarItemCarrito(index)});
@@ -34,18 +34,37 @@ const reenderizar = () =>{
 }
 
 
-
+let id= 0;
 const agregarItemCarrito = (index) => {
-    carritoArr.push(sushiData[index]);
-    alert(`Usted ha agregado ${sushiData[index].name}`);
+    let price = prices[index].value.split('-');
+    const sushiItem = sushiData[index];
+    price = {
+        'unidades' : price[0],
+        'precio' : price[1]
+    }
+    let item = {
+        name: sushiItem.name,
+        description: sushiItem.description,
+        img : sushiItem.img,
+        price: price,
+        type: sushiItem.type
+    };
+    localStorage.setItem(id, JSON.stringify(item));
+    id++;
+    carritoArr.push(item);
+    alert(`Usted ha agregado ${sushiData[index].name} al carrito`);
     
 };
 
 const showCarItems = () => {
-    console.log('Aca estoy');
-    for (const item of carritoArr) {
-        alert(`Usted tiene ${item.name}`);
+    let total = 0;
+    for(let i=0; i<localStorage.length; i++){
+        const item = JSON.parse(localStorage.getItem(i));
+        const {unidades, precio} = item.price;
+        alert(`Usted ha comprado ${unidades} unidades de ${item.name} con un precio de  ${precio}`);
+        total+= +precio;
     }
+    alert(`El precio total es de $${total}`);    
 }
 
 const limpiarPantalla = () => {
@@ -77,6 +96,8 @@ const filtrarTodo = () => {
 }
 
 reenderizar();
+
+const prices = document.querySelectorAll('select');
 
 carrito.addEventListener('click', showCarItems);
 comboFilter.addEventListener('click', filtrarCombo);
