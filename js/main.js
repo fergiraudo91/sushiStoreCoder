@@ -36,6 +36,7 @@ const reenderizar = () =>{
 
 let id= 0;
 const agregarItemCarrito = (index) => {
+    let prices = document.querySelectorAll('select');
     let price = prices[index].value.split('-');
     const sushiItem = data[index];
     price = {
@@ -97,7 +98,7 @@ const filtrarTodo = () => {
 
 reenderizar();
 
-const prices = document.querySelectorAll('select');
+
 
 carrito.addEventListener('click', showCarItems);
 comboFilter.addEventListener('click', filtrarCombo);
