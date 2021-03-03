@@ -1,5 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 *{
     box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
 }
 
 body{
@@ -14,4 +19,5 @@ body{
 @import 'carousel';
 @import 'filter-menu';
 @import 'sushi-items';
+@import 'about';
 @import 'footer';

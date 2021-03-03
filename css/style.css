@@ -1,6 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
 * {
   box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth; }
 
 body {
   margin: 0;
@@ -27,7 +31,8 @@ header {
     display: flex;
     justify-content: space-around;
     align-items: center; }
-    .main-menu ul li {
+    .main-menu ul a {
+      text-decoration: none;
       cursor: pointer;
       color: white;
       list-style: none;
@@ -39,11 +44,11 @@ header {
       transition: color 0.5s linear 0.2s;
       transition: background 0.5s linear 0.2s;
       border-radius: 5px; }
-      .main-menu ul li i {
+      .main-menu ul a li i {
         margin-right: 10px; }
-    .main-menu ul li:last-of-type {
+    .main-menu ul a:last-of-type {
       border-right: 0px; }
-    .main-menu ul li:hover {
+    .main-menu ul a:hover {
       color: black;
       background: white; }
 
@@ -252,7 +257,6 @@ header {
   gap: 2rem;
   width: 100%;
   padding: 2rem;
-  margin-bottom: 2rem;
   background: black; }
   .sushiList .sushi-item {
     align-items: center;
@@ -336,6 +340,67 @@ header {
 @media (min-width: 0px) and (max-width: 575px) {
   .sushiList {
     grid-template-columns: 1fr; } }
+
+#nosotros {
+  background-image: url("../fotos/chef.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 80vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  #nosotros .about-item {
+    width: 50%;
+    margin: 0 2rem;
+    text-align: center;
+    background: white;
+    padding: 12px;
+    border-radius: 5px;
+    border: 2px solid black;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75); }
+  #nosotros .about-item:first-of-type h2 {
+    font-family: 'Great Vibes', sans-serif;
+    font-size: 2.5rem;
+    background: black;
+    color: white;
+    padding: 10px 0 6px 0;
+    border-radius: 5px; }
+  #nosotros .about-item:last-of-type {
+    width: 30%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    align-items: center; }
+    #nosotros .about-item:last-of-type p {
+      margin: 0;
+      padding: 8px; }
+
+@media (min-width: 480px) and (max-width: 800px) {
+  #nosotros {
+    display: block;
+    height: 100%; }
+  .about-item {
+    margin: 0 auto !important;
+    width: 80% !important;
+    margin-top: 2rem !important; } }
+
+@media (min-width: 0px) and (max-width: 479px) {
+  #nosotros {
+    display: block;
+    height: 100%; }
+  .about-item {
+    margin: 0 auto !important;
+    width: 90% !important;
+    margin-top: 2rem !important; }
+  .about-item:last-of-type {
+    margin-bottom: 2rem !important; } }
 
 footer {
   background: #0e0e0e;
