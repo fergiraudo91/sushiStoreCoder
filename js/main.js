@@ -1,13 +1,7 @@
 import sushiData from '../data/sushiData.js';
 const sushiList = $('#sushiList')[0];
-console.log(sushiList);
-const carrito = $('#carrito')[0];
-console.log(carrito)
 const carritoArr = [];
-const comboFilter = $('#combo')[0];
-const piezaFilter = $('#pieza')[0];
-const ensaladaFilter = $('#ensalada')[0];
-const todoFilter = $('#todos')[0];
+
 
 let data = sushiData;
 
@@ -64,7 +58,7 @@ const showCarItems = () => {
     for(let i=0; i<localStorage.length; i++){
         const item = JSON.parse(localStorage.getItem(i));
         const {unidades, precio} = item.price;
-        alert(`Usted ha comprado ${unidades} unidades de ${item.name} con un precio de  ${precio}`);
+        alert(`Usted ha comprado ${unidades} unidades de ${item.name} con un precio de $ ${precio}`);
         total+= +precio;
     }
     alert(`El precio total es de $${total}`);    
@@ -102,8 +96,8 @@ reenderizar();
 
 
 
-carrito.addEventListener('click', showCarItems);
-comboFilter.addEventListener('click', filtrarCombo);
-piezaFilter.addEventListener('click', filtrarPieza);
-ensaladaFilter.addEventListener('click', filtrarEnsalada);
-todoFilter.addEventListener('click', filtrarTodo);
+$('#carrito').on('click', showCarItems);
+$('#combo').on('click', filtrarCombo);
+$('#pieza').on('click', filtrarPieza);
+$('#ensalada').on('click', filtrarEnsalada);
+$('#todos').on('click', filtrarTodo);
