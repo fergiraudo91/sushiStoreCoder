@@ -1,11 +1,13 @@
 import sushiData from '../data/sushiData.js';
-const sushiList = document.getElementById('sushiList');
-const carrito = document.getElementById('carrito');
+const sushiList = $('#sushiList')[0];
+console.log(sushiList);
+const carrito = $('#carrito')[0];
+console.log(carrito)
 const carritoArr = [];
-const comboFilter = document.getElementById('combo');
-const piezaFilter = document.getElementById('pieza');
-const ensaladaFilter = document.getElementById('ensalada');
-const todoFilter = document.getElementById('todos');
+const comboFilter = $('#combo')[0];
+const piezaFilter = $('#pieza')[0];
+const ensaladaFilter = $('#ensalada')[0];
+const todoFilter = $('#todos')[0];
 
 let data = sushiData;
 
