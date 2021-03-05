@@ -1,6 +1,7 @@
 import sushiData from '../data/sushiData.js';
 const sushiList = $('#sushiList')[0];
 const carritoArr = [];
+const carritoModal = document.getElementById('display-items');
 
 
 let data = sushiData;
@@ -57,11 +58,46 @@ const showCarItems = () => {
     let total = 0;
     for(let i=0; i<localStorage.length; i++){
         const item = JSON.parse(localStorage.getItem(i));
+        console.log(item);
         const {unidades, precio} = item.price;
-        alert(`Usted ha comprado ${unidades} unidades de ${item.name} con un precio de $ ${precio}`);
+        console.log(item)
+        const divItem = document.createElement('div');
+        divItem.className = 'carrito-item';
+        divItem.innerHTML = `<div class="izquierda">
+            <span>${item.name}</span>
+        </div>
+        <div class="derecha">
+            <div class="precio">${unidades} unidades $${precio}</div><span class="trash"><i class="fas fa-trash"></i></span>
+        </div>`;
+        carritoModal.append(divItem);
         total+= +precio;
     }
-    alert(`El precio total es de $${total}`);    
+    const divTotal = document.createElement('div');
+    divTotal.className = "total-container";
+    divTotal.innerHTML = `<span>Total</span> <span>$${total}</span>`;
+    carritoModal.append(divTotal);
+    $('#carrito-modal').css({
+        "display" : "block"
+    })
+    
+    $('#display-items').animate({
+        "width": "40%"
+    }, "slow");
+    $('#close-button').on('click', closeCarrito);
+}
+
+const closeCarrito = () =>{
+    $('#display-items').animate({
+        "width": "-40%"
+    }, "slow", () => {
+        $('#carrito-modal').css({
+            "display" : "none"
+        });
+        carritoModal.innerHTML = `
+    <i class="fas fa-window-close close" id="close-button"></i>
+    <h2 class="carrito-id">Tu Pedido</h2>`;
+    });
+    $('#close-button').on('click', closeCarrito);   
 }
 
 const limpiarPantalla = () => {
@@ -101,3 +137,4 @@ $('#combo').on('click', filtrarCombo);
 $('#pieza').on('click', filtrarPieza);
 $('#ensalada').on('click', filtrarEnsalada);
 $('#todos').on('click', filtrarTodo);
+$('#close-button').on('click', closeCarrito);

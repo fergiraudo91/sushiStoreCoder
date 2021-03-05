@@ -416,3 +416,66 @@ footer {
     cursor: pointer; }
   footer i:hover {
     color: #0388b4; }
+
+#carrito-modal {
+  display: none;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 98; }
+  #carrito-modal #display-items {
+    margin-top: 58px;
+    width: 0%;
+    background: white;
+    height: 90vh;
+    position: absolute;
+    right: 0;
+    opacity: 1;
+    z-index: 100;
+    border-radius: 10px; }
+    #carrito-modal #display-items .close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      color: #CB3234;
+      font-size: 2rem;
+      cursor: pointer; }
+    #carrito-modal #display-items .total-container {
+      position: absolute;
+      width: 100%;
+      bottom: 20px;
+      left: 20px;
+      display: flex;
+      justify-content: space-around;
+      border-top: 1px solid grey;
+      margin-top: 2rem; }
+      #carrito-modal #display-items .total-container span {
+        display: block;
+        width: 50%;
+        text-align: center;
+        font-size: 1.5rem;
+        font-weight: bold; }
+    #carrito-modal #display-items .carrito-id {
+      text-align: center;
+      margin-top: 10px;
+      font-size: 1.6rem;
+      margin-bottom: 1rem; }
+    #carrito-modal #display-items .carrito-item {
+      padding: 10px 0;
+      display: flex;
+      justify-content: space-around;
+      border-bottom: 1px solid #eee; }
+      #carrito-modal #display-items .carrito-item .izquierda {
+        width: 50%;
+        text-align: center; }
+      #carrito-modal #display-items .carrito-item .derecha {
+        width: 50%;
+        text-align: center;
+        display: flex;
+        justify-content: space-around; }
+        #carrito-modal #display-items .carrito-item .derecha .trash {
+          color: #CB3234;
+          align-self: flex-end; }
