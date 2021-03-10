@@ -1,5 +1,5 @@
 const sushiList = $("#sushiList")[0];
-const carritoArr = [];
+const carritoArr = JSON.parse(localStorage.getItem('compra')) || [];
 const carritoModal = document.getElementById("display-items");
 let carrTimes = 0;
 
