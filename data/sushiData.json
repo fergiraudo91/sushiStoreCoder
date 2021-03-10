@@ -1,0 +1,504 @@
+[
+    {
+        "id": 0,
+        "name": "Bomba Afrodita",
+        "description": "Salmon, mango, palta y queso phila envuelto en tamago, con salsa de maracuya y batatas fritas.",
+        "img": "fotos/piezas/bombra_afrodita.jpg",
+        "type": "pieza",
+        "prices": [
+            {
+                "unidades": 3,
+                "precio": 335
+            },
+            {
+                "unidades": 6,
+                "precio": 670
+            }
+        ]
+    },
+    {
+        "id": 1,
+        "name": "Geishas de Salmón",
+        "description": "Geishas de Salmón fresco rellenas de queso Philadelphia con Palta",
+        "img": "fotos/piezas/geishas_salmon.jpg",
+        "type": "pieza",
+        "prices": [
+            {
+                "unidades": 3,
+                "precio": 245
+            },
+            {
+                "unidades": 6,
+                "precio": 490
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "HOT Bologna",
+        "description": "Roll rebozado relleno de langostinos salteado con pimentón y philadelphia.",
+        "img": "fotos/piezas/hot_bologna.jpg",
+        "type": "pieza",
+        "prices": [
+            {
+                "unidades": 5,
+                "precio": 270
+            },
+            {
+                "unidades": 10,
+                "precio": 540
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "name": "HOT Firenze",
+        "description": "Roll rebozado relleno de salmon grill, coronado con mayo palta.",
+        "img": "fotos/piezas/hot_firenze.jpg",
+        "type": "pieza",
+        "prices": [
+            {
+                "unidades": 5,
+                "precio": 260
+            },
+            {
+                "unidades": 10,
+                "precio": 520
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "name": "HOT New York Philadelphia",
+        "description": "Rebosado, Relleno de salmón, arroz, palta y queso Philadelphia.",
+        "img": "fotos/piezas/hot_new_york_phila.jpg",
+        "type": "pieza",
+        "prices": [
+            {
+                "unidades": 5,
+                "precio": 260
+            },
+            {
+                "unidades": 10,
+                "precio": 520
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Nigiri Salmon",
+        "description": "Bocaditos de arroz envuelto en finos cortes del mas fresco salmon.",
+        "img": "fotos/piezas/nigiri_salmon.jpg",
+        "type": "pieza",
+        "prices": [
+            {
+                "unidades": 5,
+                "precio": 345
+            },
+            {
+                "unidades": 10,
+                "precio": 690
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "name": "Roll Apaltado",
+        "description": "Roll relleno de langostinos rebozados queso philadelphia, cubierto con palta.",
+        "img": "fotos/piezas/roll_apaltado.jpg",
+        "type": "pieza",
+        "prices": [
+            {
+                "unidades": 5,
+                "precio": 260
+            },
+            {
+                "unidades": 10,
+                "precio": 520
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "name": "Roll Bs As",
+        "description": "Roll relleno de queso philadelphia y langostinos rebozados cubierto con una fina capa de salmón.",
+        "img": "fotos/piezas/roll_bs_as.jpg",
+        "type": "pieza",
+        "prices": [
+            {
+                "unidades": 5,
+                "precio": 260
+            },
+            {
+                "unidades": 10,
+                "precio": 520
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "name": "Roll Calafate",
+        "description": "Roll de tamago relleno de arroz, philadelphia y palta envuelto en salmon rosado.",
+        "img": "fotos/piezas/roll_calafate.jpg",
+        "type": "pieza",
+        "prices": [
+            {
+                "unidades": 5,
+                "precio": 345
+            },
+            {
+                "unidades": 10,
+                "precio": 690
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "name": "Roll California",
+        "description": "Roll relleno de kanikama con philadelphia y palta. Decorado con sésamo",
+        "img": "fotos/piezas/roll_california.jpg",
+        "type": "pieza",
+        "prices": [
+            {
+                "unidades": 5,
+                "precio": 225
+            },
+            {
+                "unidades": 10,
+                "precio": 450
+            }
+        ]
+    },
+    {
+        "id": 10,
+        "name": "Roll Chop Suey",
+        "description": "Roll relleno con vegetales salteados al wok y palta. Decorado con sésamo",
+        "img": "fotos/piezas/roll_chop_suey.jpg",
+        "type": "pieza",
+        "prices": [
+            {
+                "unidades": 5,
+                "precio": 225
+            },
+            {
+                "unidades": 10,
+                "precio": 450
+            }
+        ]
+    },
+    {
+        "id": 11,
+        "name": "Roll Clerck",
+        "description": "Roll relleno de salmón cocido con miel y mostaza, queso philadelphia e hilos de batata frita por fuera.",
+        "img": "fotos/piezas/roll_clerck.jpg",
+        "type": "pieza",
+        "prices": [
+            {
+                "unidades": 5,
+                "precio": 225
+            },
+            {
+                "unidades": 10,
+                "precio": 450
+            }
+        ]
+    },
+    {
+        "id": 12,
+        "name": "Roll New York con Philadelphia",
+        "description": "Relleno de salmón, palta, y queso Philadelphia. Decorado con sésamo",
+        "img": "fotos/piezas/roll_new_york_phila.jpg",
+        "type": "pieza",
+        "prices": [
+            {
+                "unidades": 5,
+                "precio": 225
+            },
+            {
+                "unidades": 10,
+                "precio": 450
+            }
+        ]
+    },
+    {
+        "id": 13,
+        "name": "Roll Niji",
+        "description": "Salmon, repollo colorado encurtido, palta, envuelto en tamago.",
+        "img": "fotos/piezas/roll_niji.jpg",
+        "type": "pieza",
+        "prices": [
+            {
+                "unidades": 5,
+                "precio": 245
+            },
+            {
+                "unidades": 10,
+                "precio": 490
+            }
+        ]
+    },
+    {
+        "id": 14,
+        "name": "Roll Persia",
+        "description": "Roll relleno de salmon, philadelphia y verdeo cubierto con sésamo tostado.",
+        "img": "fotos/piezas/roll_persia.jpg",
+        "type": "pieza",
+        "prices": [
+            {
+                "unidades": 5,
+                "precio": 260
+            },
+            {
+                "unidades": 10,
+                "precio": 520
+            }
+        ]
+    },
+    {
+        "id": 15,
+        "name": "Roll Philadelphia",
+        "description": "Roll relleno de salmón y queso philadelphia, cubierto con sésamo tostado.",
+        "img": "fotos/piezas/roll_phila.jpg",
+        "type": "pieza",
+        "prices": [
+            {
+                "unidades": 5,
+                "precio": 260
+            },
+            {
+                "unidades": 10,
+                "precio": 520
+            }
+        ]
+    },
+    {
+        "id": 16,
+        "name": "Roll Spicy Tuna c/palta",
+        "description": "Roll relleno de atún, mayonesa, verdeo y togarashi. Cubierto con sésamo tostado.",
+        "img": "fotos/piezas/roll_spicy.jpg",
+        "type": "pieza",
+        "prices": [
+            {
+                "unidades": 5,
+                "precio": 225
+            },
+            {
+                "unidades": 10,
+                "precio": 450
+            }
+        ]
+    },
+    {
+        "id": 17,
+        "name": "Roll Tora",
+        "description": "Piezas de Roll relleno de langostinos rebozados con palta cubierto en ciboulette y batatas fritas.",
+        "img": "fotos/piezas/roll_tora.jpg",
+        "type": "pieza",
+        "prices": [
+            {
+                "unidades": 5,
+                "precio": 260
+            },
+            {
+                "unidades": 10,
+                "precio": 520
+            }
+        ]
+    },
+    {
+        "id": 18,
+        "name": "Roll Valencia",
+        "description": "Tomates secos, rucula fresca, cebolla caramelizada, philadelphia y cubierto con ciboulette picado.",
+        "img": "fotos/piezas/roll_valencia.jpg",
+        "type": "pieza",
+        "prices": [
+            {
+                "unidades": 5,
+                "precio": 225
+            },
+            {
+                "unidades": 10,
+                "precio": 450
+            }
+        ]
+    },
+    {
+        "id": 19,
+        "name": "Sashimi Salmon",
+        "description": "Selectos cortes del mas fresco salmon de la casa, de primera calidad.",
+        "img": "fotos/piezas/sashimi_salmon.jpg",
+        "type": "pieza",
+        "prices": [
+            {
+                "unidades": 5,
+                "precio": 345
+            },
+            {
+                "unidades": 10,
+                "precio": 690
+            }
+        ]
+    },
+    {
+        "id": 20,
+        "name": "ALASKA",
+        "description": "El clásico de POP! Mucho salmón y algo más.",
+        "img": "fotos/combos/alaska.jpg",
+        "type": "combo",
+        "prices": [
+            {
+                "unidades": 12,
+                "precio": 699
+            },
+            {
+                "unidades": 25,
+                "precio": 1429
+            },
+            {
+                "unidades": 40,
+                "precio": 2129
+            }
+        ]
+    },
+    {
+        "id": 21,
+        "name": "BILBAO",
+        "description": "Riquísimo mix de sabores.",
+        "img": "fotos/combos/bilbao.jpg",
+        "type": "combo",
+        "prices": [
+            {
+                "unidades": 12,
+                "precio": 639
+            },
+            {
+                "unidades": 25,
+                "precio": 1289
+            },
+            {
+                "unidades": 40,
+                "precio": 1999
+            }
+        ]
+    },
+    {
+        "id": 22,
+        "name": "BLACK",
+        "description": "Combo premium para probar un poco de todo.",
+        "img": "fotos/combos/bilbao.jpg",
+        "type": "combo",
+        "prices": [
+            {
+                "unidades": 12,
+                "precio": 779
+            },
+            {
+                "unidades": 25,
+                "precio": 1559
+            },
+            {
+                "unidades": 40,
+                "precio": 2399
+            }
+        ]
+    },
+    {
+        "id": 23,
+        "name": "TOKYO",
+        "description": "Comes rico y pagas poco.",
+        "img": "fotos/combos/tokyo.jpg",
+        "type": "combo",
+        "prices": [
+            {
+                "unidades": 12,
+                "precio": 549
+            },
+            {
+                "unidades": 25,
+                "precio": 1129
+            },
+            {
+                "unidades": 40,
+                "precio": 1729
+            }
+        ]
+    },
+    {
+        "id": 24,
+        "name": "Poke Salmon Fresh",
+        "description": "Fresca ensalada de salmón, eneldo fresco, rayadura de limon, aceite de sesamo, palta, queso phila, sobre arroz gohan (incluye salsa soja)",
+        "img": "fotos/ensaladas/poke-salmon.jpg",
+        "type": "ensalada",
+        "prices": [
+            {
+                "unidades": 1,
+                "precio": 499
+            }
+        ]
+    },
+    {
+        "id": 25,
+        "name": "Poke Salmon Crispy",
+        "description": "Fresca ensalada de salmón rebozado, palta, queso phila, repollo y zanahoria sobre arroz Incluye 1 Salsa Soja",
+        "img": "fotos/ensaladas/poke-salmon-crispy.jpg",
+        "type": "ensalada",
+        "prices": [
+            {
+                "unidades": 1,
+                "precio": 499
+            }
+        ]
+    },
+    {
+        "id": 26,
+        "name": "Poke Salad Hawaiana",
+        "description": "Fresca ensalada de salmon fresco, julianas de tamagoi, repollo colorado encurtido, palta y queso phila, sobre arroz gohan (incluye salsa soja)",
+        "img": "fotos/ensaladas/poke_salad_hawaiana.jpg",
+        "type": "ensalada",
+        "prices": [
+            {
+                "unidades": 1,
+                "precio": 499
+            }
+        ]
+    },
+    {
+        "id": 27,
+        "name": "Poke Langostinos",
+        "description": "Fresca ensalada de langostinos rebozados, palta, queso phila, repollo y zanahoria sobre arroz Incluye 1 Salsa Soja",
+        "img": "fotos/ensaladas/poke-langostinos.jpg",
+        "type": "ensalada",
+        "prices": [
+            {
+                "unidades": 1,
+                "precio": 411
+            }
+        ]
+    },
+    {
+        "id": 28,
+        "name": "Poke Pollo MEX",
+        "description": "Fresca ensalada de pollo rebozado, salsa teriyaki, guacamole y queso phila, sobre arroz gohan (incluye salsa soja)",
+        "img": "fotos/ensaladas/poke-pollo-mex.jpg",
+        "type": "ensalada",
+        "prices": [
+            {
+                "unidades": 1,
+                "precio": 411
+            }
+        ]
+    },
+    {
+        "id": 29,
+        "name": "Poke Veggie",
+        "description": "Fresca ensalada de vegetales de estacion salteados en salsa teriyaki y queso phila, sobre arroz gohan (incluye salsa soja)",
+        "img": "fotos/ensaladas/poke-veggie.jpg",
+        "type": "ensalada",
+        "prices": [
+            {
+                "unidades": 1,
+                "precio": 411
+            }
+        ]
+    }
+]

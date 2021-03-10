@@ -16,6 +16,7 @@
       integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script
       src="https://kit.fontawesome.com/fcd512cdf9.js"
       crossorigin="anonymous"
@@ -189,7 +190,7 @@
       <section id="sushiList" class="sushiList"></section>
       <section id="nosotros">
         
-          <article class="about-item">
+          <article class="about-item" data-aos="fade-up">
             <h2>SushiFusión</h2>
             <h3>Amplia trayectoria</h3>
             <p>
@@ -201,7 +202,7 @@
               destacada atención.
             </p>
           </article>
-          <article class="about-item">
+          <article class="about-item" data-aos="fade-up">
             <p><i class="fas fa-map-marker-alt"></i> Belgrano 2461 - Mar del Plata</p>
             <p><i class="fas fa-envelope"></i> sushifusion@hotmail.com.ar</p>
             <p><i class="fas fa-phone"></i> (0223) 496 7242</p>
@@ -243,5 +244,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="data/sushiData.js" type="module"></script>
     <script src="js/main.js" type="module"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
   </body>
 </html>

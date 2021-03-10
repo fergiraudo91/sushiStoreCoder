@@ -7,6 +7,25 @@ html{
     scroll-behavior: smooth;
 }
 
+::-webkit-scrollbar{
+    width: 15px;
+    background: black;
+  }
+
+  ::-webkit-scrollbar-track{
+    border: 1px solid #eee;
+    box-shadow: inset 0 0 2.5px 2px rgba(0, 0, 0, 0.5);
+  }
+
+  ::-webkit-scrollbar-thumb{
+    background: linear-gradient(
+      45deg,
+      #eee,
+      gray
+    );
+    border-radius: 3px;
+  }
+
 body{
     margin: 0;
     display: flex;
