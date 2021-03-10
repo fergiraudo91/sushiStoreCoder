@@ -1,6 +1,7 @@
 const sushiList = $("#sushiList")[0];
 const carritoArr = [];
 const carritoModal = document.getElementById("display-items");
+let carrTimes = 0;
 
 const getDataByJson = async (url) => {
   const data = await fetch(url);
@@ -27,7 +28,10 @@ const reenderizar = async (data) => {
             <button class='btnCompra'>Agregar Al Carrito</button>
             </div>
         `;
+    
     sushiList.append(sushi);
+    $(".sushi-item").hide();
+    $(".sushi-item").fadeIn("slow");
     const select = document.getElementById(`selection${el.id}`);
     sushi.querySelector("button").addEventListener("click", () => {
       agregarItemCarrito(el, select.value);
@@ -48,9 +52,8 @@ const agregarItemCarrito = (item, price) => {
   alert(`${item.name} se ha agregado correctamente al carrito`);
 };
 
-const showCarItems = () => {
+const openCar = (items) => {
   let total = 0;
-  const items = JSON.parse(localStorage.getItem("compra")) || [];
   for (let i = 0; i < items.length; i++) {
     const { cantidad, precio } = items[i].price;
     const divItem = document.createElement("div");
@@ -78,8 +81,18 @@ const showCarItems = () => {
     },
     "slow"
   );
+};
 
+const showCarItems = () => {
+  const items = JSON.parse(localStorage.getItem("compra")) || [];
+  if(carrTimes%2==0){
+    openCar(items);
+  }
+  else{
+    closeCarrito();
+  }
   $("#close-button").on("click", closeCarrito);
+  carrTimes++;
 };
 
 const closeCarrito = () => {
