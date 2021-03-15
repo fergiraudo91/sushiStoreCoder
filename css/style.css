@@ -431,6 +431,10 @@ header {
   .contact-form .btn:hover {
     background: black; }
 
+@media (min-width: 0px) and (max-width: 700px) {
+  .contact-form .contact {
+    min-width: 10px; } }
+
 footer {
   background: #0e0e0e;
   color: white;
