@@ -356,7 +356,7 @@ header {
 
 #nosotros {
   background-image: url("../fotos/chef.jpg");
-  background-position: center;
+  background-position: right;
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
@@ -414,6 +414,22 @@ header {
     margin-top: 2rem !important; }
   .about-item:last-of-type {
     margin-bottom: 2rem !important; } }
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: #212529;
+  color: white; }
+  .contact-form .contact {
+    min-width: 600px; }
+  .contact-form .btn {
+    background-color: white; }
+  .contact-form .btn:hover {
+    background: black; }
 
 footer {
   background: #0e0e0e;

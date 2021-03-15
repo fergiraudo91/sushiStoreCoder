@@ -1,0 +1,19 @@
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: #212529;
+    color: white;
+    .contact{
+        min-width: 600px;
+    }
+    .btn{
+        background-color: white;
+    }
+    .btn:hover{
+        background: black;
+    }
+}

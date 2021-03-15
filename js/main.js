@@ -102,7 +102,9 @@ const buyItems = (items, total) => {
   carritoModal.innerHTML = '';
   carritoModal.append(loader);
   setTimeout(() => {
-    carritoModal.innerHTML = `<form class="buy-form" id="buy-form" name="buyForm">
+    carritoModal.innerHTML = `
+    <i class="fas fa-window-close close" id="close-button"></i>
+    <form class="buy-form" id="buy-form" name="buyForm">
     <div class="form-group">
       <label for="inputName">Nombre</label>
       <input type="text" class="form-control" id="inputName" required>
@@ -125,10 +127,9 @@ const buyItems = (items, total) => {
   </div>
     <button type="submit" class="btn btn-dark">Comprar</button>
   </form>`;
+  $('#close-button').on('click', closeCarrito);
   $('#buy-form').on('submit', (e) => {
-    console.log(e);
     e.preventDefault();
-    console.log(items);
     const name = document.getElementById('inputName').value;
     const surname = document.getElementById('surname').value;
     const direccion = document.getElementById('address').value;
@@ -140,7 +141,8 @@ const buyItems = (items, total) => {
       carritoModal.innerHTML = '';
       const buyDiv = document.createElement('div');
       buyDiv.className = 'pedido';
-      buyDiv.innerHTML = `<h2>Su pedido ha sido registrado</h2>
+      buyDiv.innerHTML = `<i class="fas fa-window-close close" id="close-button"></i>
+      <h2>Su pedido ha sido registrado</h2>
         <p>Número de orden: ${Math.floor(Math.random() * 1000)}</p>
         <p>Nombre: ${name}</p>
         <p>Apellido: ${surname}</p>
@@ -162,6 +164,10 @@ const buyItems = (items, total) => {
       console.log(total);
       buyDiv.append(totalDiv);
       carritoModal.append(buyDiv);
+      $('#close-button').on('click', closeCarrito);
+      carritoArr = [];
+      localStorage.removeItem('compra');
+      const apiURL = 'https://api.whatsapp.com/send?phone=+5493572608930&text=hola,%20qué%20tal?'
     }, 3000);
   });
 
