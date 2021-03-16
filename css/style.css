@@ -415,6 +415,35 @@ header {
   .about-item:last-of-type {
     margin-bottom: 2rem !important; } }
 
+#delivery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 10px;
+  height: 50vh;
+  width: 100%;
+  color: white;
+  position: relative;
+  background-color: black; }
+  #delivery::before {
+    content: "";
+    top: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url("../fotos/deliveryback.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.5; }
+  #delivery h2, #delivery p {
+    position: relative; }
+  #delivery h2 {
+    font-size: 2.2rem; }
+  #delivery p {
+    font-size: 1.5rem; }
+
 .contact-form {
   display: flex;
   flex-direction: column;
