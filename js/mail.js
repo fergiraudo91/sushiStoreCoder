@@ -1,3 +1,4 @@
+//Este archivo simula enviar un mail con una API a un archivo php que hace algunas comprobaciones
 const contactForm = document.getElementById('contact');
 const respuesta = document.getElementById('respuesta');
 

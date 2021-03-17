@@ -1,15 +1,22 @@
-
+const phoneCar = document.getElementById('car-phone');
+//Selecciono el elemento del DOM donde se van a cargar todos los items disponibles
 const sushiList = $("#sushiList")[0];
+//Se establece un array con los items de compra que esten en el DOM, en el caso de no estar se crea un array vacío
 let carritoArr = JSON.parse(localStorage.getItem("compra")) || [];
+//Se selecciona los elementos del carrito en el DOM
 const carritoModal = document.getElementById("display-items");
+//Se crea una variable de cantidad de veces que se abrio el carrito para controlar apertura y cierre del mismo cuando utilicen el botón carrito, en caso de que sea par se abre y en
+//caso de que sea impar se cierra
 let carrTimes = 0;
 
+//Esta función obtiene los datos de un JSON de forma asíncrona
 const getDataByJson = async (url) => {
   const data = await fetch(url);
   const response = await data.json();
   return response;
 };
 
+//Esta función se encarga de reenderizar los ítems en pantalla
 const reenderizar = async (data) => {
   data.forEach((el) => {
     const sushi = document.createElement("div");
@@ -40,6 +47,8 @@ const reenderizar = async (data) => {
   });
 };
 
+//Esta función agrega items al carrito y al localStorage eliminando los precios del item para agregar el seleccionado por el usuario
+//Esto se debe a que cada item tiene varios precios y solo queremos el precio que selecciono el usuario
 const agregarItemCarrito = (item, price) => {
   delete item.prices;
   price = price.split("-");
@@ -53,7 +62,8 @@ const agregarItemCarrito = (item, price) => {
   alert(`${item.name} se ha agregado correctamente al carrito`);
 };
 
-const openCar = (items) => {
+//Esta función abre el carrito con una animación y renderiza todos los items
+const openCar = (items, width) => {
   let total = 0;
   carritoModal.innerHTML = `
     <i class="fas fa-window-close close" id="close-button"></i>
@@ -89,20 +99,16 @@ const openCar = (items) => {
 
   $("#display-items").animate(
     {
-      width: "40%",
+      width: `${width}%`,
     },
     "slow"
   );
+  carrTimes++;
 };
 
-const buyItems = (items, total) => {
-  const loader = document.createElement('div');
-  loader.className = 'loader-container';
-  loader.innerHTML = '<div class="loader"></div><div class="loader2"></div>';
-  carritoModal.innerHTML = '';
-  carritoModal.append(loader);
-  setTimeout(() => {
-    carritoModal.innerHTML = `
+//Esta función reenderiza el formulario para que el usuario cargue su información
+const setBuyForm = () => {
+  carritoModal.innerHTML = `
     <i class="fas fa-window-close close" id="close-button"></i>
     <form class="buy-form" id="buy-form" name="buyForm">
     <div class="form-group">
@@ -127,6 +133,22 @@ const buyItems = (items, total) => {
   </div>
     <button type="submit" class="btn btn-dark">Comprar</button>
   </form>`;
+}
+
+//Esta función simula la carga de los elementos a través de una pequeña animación de 3 segundos
+//Luego renderiza nuevamente el formulario y finalmente los datos confirmados
+const buyItems = (items, total) => {
+  if(total === 0){
+    closeCarrito();
+    return;
+  }
+  const loader = document.createElement('div');
+  loader.className = 'loader-container';
+  loader.innerHTML = '<div class="loader"></div><div class="loader2"></div>';
+  carritoModal.innerHTML = '';
+  carritoModal.append(loader);
+  setTimeout(() => {
+    setBuyForm();
   $('#close-button').on('click', closeCarrito);
   $('#buy-form').on('submit', (e) => {
     e.preventDefault();
@@ -134,7 +156,6 @@ const buyItems = (items, total) => {
     const surname = document.getElementById('surname').value;
     const direccion = document.getElementById('address').value;
     const payment = document.getElementById('payment').value;
-    console.log(name, surname, direccion, payment);
     carritoModal.innerHTML = '';
     carritoModal.append(loader);
     setTimeout(() => {
@@ -150,7 +171,6 @@ const buyItems = (items, total) => {
       `;
       for(let i=0; i<items.length; i++){
         const item = document.createElement('p');
-        console.log(items[i]);
         const {cantidad, precio} = items[i].price;
         item.innerHTML = `${cantidad} ${items[i].name} - ${precio}`;
         buyDiv.append(item);
@@ -161,44 +181,43 @@ const buyItems = (items, total) => {
         <p>$${total}</p>
         </div>
       `;
-      console.log(total);
       buyDiv.append(totalDiv);
       carritoModal.append(buyDiv);
       $('#close-button').on('click', closeCarrito);
       carritoArr = [];
       localStorage.removeItem('compra');
-      const apiURL = 'https://api.whatsapp.com/send?phone=+5493572608930&text=hola,%20qué%20tal?'
     }, 3000);
   });
-
   }, 3000);
 };
 
+//Esta función se utiliza para eliminar un ítem del carritoa través del ID
 const deleteItem = (id) => {
   const option = confirm(
     "¿Está seguro que quiere eliminar el item seleccionado?"
   );
   if (option) {
     const newCarr = carritoArr.filter((el) => el.id !== id);
-    console.log(newCarr);
     carritoArr = newCarr;
     localStorage.setItem("compra", JSON.stringify(carritoArr));
     openCar(carritoArr);
   }
 };
 
-const showCarItems = () => {
+//Con esta función verifico si el carrito se ha presionado un numero par o impar de veces para precisar si se abre o se cierra
+const showCarItems = (width = 40) => {
   const items = JSON.parse(localStorage.getItem("compra")) || [];
   if (carrTimes % 2 == 0) {
-    openCar(items);
+    openCar(items, width);
   } else {
     closeCarrito();
   }
   $("#close-button").on("click", closeCarrito);
-  carrTimes++;
 };
 
+//Esta función cierra el carrito a través de una animación y sobreescribe su contenido para cuando se vuelva abrir
 const closeCarrito = () => {
+  carrTimes++;
   $("#display-items").animate(
     {
       width: "-40%",
@@ -216,10 +235,12 @@ const closeCarrito = () => {
   $("#close-button").on("click", closeCarrito);
 };
 
+//Esta función limpia los elementos del DOM de la lista de sushi
 const limpiarPantalla = () => {
   sushiList.innerHTML = "";
 };
 
+//Esta función es para filtrar por combos
 const filtrarCombo = async () => {
   const dataFetch = await fetch("data/sushiData.json");
   const response = await dataFetch.json();
@@ -228,6 +249,7 @@ const filtrarCombo = async () => {
   reenderizar(data);
 };
 
+//Esta función es para filtrar por piezas
 const filtrarPieza = async () => {
   const dataFetch = await fetch("data/sushiData.json");
   const response = await dataFetch.json();
@@ -235,7 +257,7 @@ const filtrarPieza = async () => {
   limpiarPantalla();
   reenderizar(data);
 };
-
+//Esta función es para filtrar por ensaladas
 const filtrarEnsalada = async () => {
   const dataFetch = await fetch("data/sushiData.json");
   const response = await dataFetch.json();
@@ -244,6 +266,7 @@ const filtrarEnsalada = async () => {
   reenderizar(data);
 };
 
+//Esta función es para obtener todos los elementos
 const filtrarTodo = async () => {
   const data = await fetch("data/sushiData.json");
   const responseData = await data.json();
@@ -253,9 +276,11 @@ const filtrarTodo = async () => {
 
 filtrarTodo();
 
-$("#carrito").on("click", showCarItems);
+//aca estan todos los eventos de escucha (EventListeners)
+$("#carrito").on("click", () => {showCarItems(40)});
 $("#combo").on("click", filtrarCombo);
 $("#pieza").on("click", filtrarPieza);
 $("#ensalada").on("click", filtrarEnsalada);
 $("#todos").on("click", filtrarTodo);
 $("#close-button").on("click", closeCarrito);
+phoneCar.addEventListener('click', () => {showCarItems(90)});
